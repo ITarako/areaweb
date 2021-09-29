@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LaravelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,14 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/first-page', function () {
-    return '<h1 style="font-family: Arial;">This is my first page in Laravel</h1>';
-});
-
-Route::get('laravel', function () {
-    $data = [
-        "Laravel Jetstream", "Models Directory", "Model Factory Classes"
-    ];
-    return view('laravel', compact('data'));
-});
+Route::get('laravel', [LaravelController::class, 'index']);
