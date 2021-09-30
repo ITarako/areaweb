@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LaravelController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('laravel', [LaravelController::class, 'index']);
+
+Route::get('students', [StudentController::class, 'index']);
